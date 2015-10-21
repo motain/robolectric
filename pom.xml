@@ -379,4 +379,12 @@
       </comments>
     </license>
   </licenses>
+
+  <distributionManagement>
+    <repository>
+      <id>internal.repo</id>
+      <name>Our Internal Repository</name>
+      <url>${internal-repo-url}</url>
+    </repository>
+  </distributionManagement>
 </project>

@@ -71,3 +71,4 @@ proguard/
 # sensitive files not to be committed at any point
 onefootball.signing.keystore
 onefootball.properties.gradle
+settings.xml
