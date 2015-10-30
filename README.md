@@ -87,7 +87,7 @@ Because Robolectric's shadows are compiled against the Android APIs that they ta
     
 After doing this once, you can build and test against the specific API level you care about:
 
-    mvn install -P android-18 (for example)
+    mvn install -P android-21 (for example)
 
 ### Using Snapshots
 
@@ -101,7 +101,7 @@ repositories {
 }
 
 dependencies {
-    testCompile "org.robolectric:robolectric:3.0-SNAPSHOT"
+    testCompile "org.robolectric:robolectric:3.0"
 }
 ```
 
@@ -116,7 +116,7 @@ dependencies {
 <dependency>
    <groupId>org.robolectric</groupId>
    <artifactId>robolectric</artifactId>
-   <version>3.0-SNAPSHOT</version>
+   <version>3.0</version>
    <scope>test</scope>
 </dependency>
 ```

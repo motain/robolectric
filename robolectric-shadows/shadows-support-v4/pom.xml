@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.robolectric</groupId>
     <artifactId>robolectric-shadows</artifactId>
-    <version>3.0.1</version>
+    <version>3.0</version>
   </parent>
 
   <artifactId>shadows-support-v4</artifactId>
@@ -96,7 +96,7 @@
           <dependency>
             <groupId>org.robolectric</groupId>
             <artifactId>robolectric-processor</artifactId>
-            <version>${project.version}</version>
+            <version>3.0</version>
           </dependency>
         </dependencies>
       </plugin>

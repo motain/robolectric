@@ -1,7 +1,7 @@
 To deploy to an internal repository:
 
   1) Create settings.xml in the root project and set `<repo-url>`, `<username>` and `<password>` values.
-  Do NOT commit this file back to the GIT (`.gitignore` will prevent this, but just in case):
+  Do <b>NOT</b> commit this file back to the GIT (`.gitignore` should prevent this, but just in case):
 
       <?xml version="1.0" encoding="UTF-8"?>
       <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
@@ -12,7 +12,7 @@ To deploy to an internal repository:
 
           <profiles>
               <profile>
-                  <id>inject-repo-url</id>
+                  <id>internal-nexus-repo</id>
                   <properties>
                       <repo-url> … </repo-url>
                   </properties>
@@ -20,12 +20,12 @@ To deploy to an internal repository:
           </profiles>
 
           <activeProfiles>
-              <activeProfile>inject-repo-url</activeProfile>
+              <activeProfile>internal-nexus-repo</activeProfile>
           </activeProfiles>
 
           <servers>
               <server>
-                  <id>internal.repo</id>
+                  <id>internal-repo</id>
                   <username> … </username>
                   <password> … </password>
               </server>
@@ -36,4 +36,4 @@ To deploy to an internal repository:
 
   2) Run the following command:
 
-  `mvn -s ./settings.xml deploy -P android-21`
+  `./scripts/deploy-release.sh`
